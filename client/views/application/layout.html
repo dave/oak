@@ -1,0 +1,60 @@
+<template name="layout">
+	{{> outer }}
+</template>
+
+<template name="loading">
+	<div class="jumbotron">
+		<h1>Loading...</h1>
+		<p>Wait there while we load Dave's CMS.</p>
+	</div>
+</template>
+
+<template name="outer">
+	{{#if currentUser}}
+	{{>loggedIn}}
+	{{else}}
+	{{>logIn}}
+	{{/if}}
+</template>
+
+<template name="logIn">
+	<div class="jumbotron">
+		<h1>Log in</h1>
+		<p>Log in with your Google account to use the CMS.</p>
+		<p><a id="login" class="btn btn-primary btn-lg" role="button">Log in</a></p>
+	</div>
+</template>
+
+<template name="loggedIn">
+	{{> header}}
+	{{yield}}
+</template>
+
+<template name="header">
+	<nav class="navbar navbar-default" role="navigation">
+
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="{{pathFor 'items'}}">Home</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Items</a></li>
+				<li><a href="#">Changes</a></li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</nav>
+	<!--<ol class="breadcrumb">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Library</a></li>
+		<li class="active">Data</li>
+	</ol>-->
+</template>

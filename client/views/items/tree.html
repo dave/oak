@@ -1,0 +1,29 @@
+
+<template name="tree">
+	<nav class="tree col-xs-3">
+		<ul id="outer">
+			{{#each getRoot}}
+			{{> main}}
+			{{/each}}
+		</ul>
+	</nav>
+</template>
+
+<template name="main">
+	<li data-order="{{order}}">
+		{{#if isItem}}
+		<span class="item-icon glyphicon {{glyph}}"></span>
+		<p id="{{_id}}" class="item-label {{selected}}">
+			<a href="{{pathFor 'items'}}">{{name}}</a>
+		</p>
+		{{/if}}
+
+		{{#if isOpen}}
+		<ul>
+			{{#each getChildren}}
+			{{> main}}
+			{{/each}}
+		</ul>
+		{{/if}}
+	</li>
+</template>

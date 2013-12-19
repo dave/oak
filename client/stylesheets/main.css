@@ -1,0 +1,36 @@
+
+
+body {
+
+}
+
+
+p.item-label.selected {
+  background-color: #ccc;
+}
+p.item-label, span.item-icon {
+	cursor: pointer;
+}
+
+nav.tree ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+nav.tree li {
+	white-space:nowrap;
+}
+
+nav.tree {
+  background-color: #eee;
+  padding: 10px;
+  padding-top:30px;
+  overflow: auto;
+}
+
+div.content {
+  padding:10px;
+}
+
+span.glyphicon+p {
+  display:inline;
+}
