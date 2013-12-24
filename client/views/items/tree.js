@@ -1,17 +1,17 @@
 Template.tree.getRoot = function () {
-	return childrenOf(null, true);
+	return roots().cursor();
 }
 
 Template.main.getChildren = function () {
-	return childrenOf(this, true);
+	return item(this).children().cursor();
 }
 
 Template.main.hasChildren = function () {
-	return hasChildren(this);
+	return item(this).children().has();
 }
 
 Template.main.isOpen = function () {
-	return this._id == null || isOpen(this);
+	return this._id == null || item(this).open();
 }
 
 Template.main.isItem = function () {
@@ -20,10 +20,10 @@ Template.main.isItem = function () {
 
 Template.main.glyph = function () {
 
-	if (!hasChildren(this))
+	if (!item(this).children().has())
 		return 'glyphicon-unchecked';
 
-	if (isOpen(this))
+	if (item(this).open())
 		return 'glyphicon-collapse-down';
 
 	return 'glyphicon-expand';
@@ -31,24 +31,24 @@ Template.main.glyph = function () {
 }
 
 Template.main.events({
-	'click': function (e) {
+	'click .item-icon': function (e) {
 		e.preventDefault();
-		setSelectedItem(this);
-		setOpen(this, !isOpen(this));
+		item(this).select().open('toggle');
+		e.stopImmediatePropagation();
+	},
+	'click .item-label': function (e) {
+		e.preventDefault();
+		item(this).select().open(true);
 		e.stopImmediatePropagation();
 	}
 });
 
 Template.main.selected = function () {
-	return Session.equals("selected_item", this._id) ? "selected" : '';
+	return item(this).selected() ? "selected" : '';
 };
 
 Template.main.order = function () {
-	var version = getLiveVersion(this);
-	if (version == null)
-		return 0;
-	else
-		return version.order;
+	return item(this) == null ? '0' : item(this).live().order();
 }
 
 Template.outer.rendered = function () {
@@ -57,49 +57,56 @@ Template.outer.rendered = function () {
 		if (document.activeElement.tagName != 'BODY')
 			return;
 
-		var current = getSelectedItem();
 		if (e.keyCode == 40)
-			keyPressDown(current);
+			keyPressDown();
 		else if (e.keyCode == 38)
-			keyPressUp(current);
+			keyPressUp();
 		else if (e.keyCode == 39)
-			keyPressRight(current);
+			keyPressRight();
 		else if (e.keyCode == 37)
-			keyPressLeft(current);
+			keyPressLeft();
 
 		e.stopImmediatePropagation();
 	});
 }
 
-var keyPressUp = function(current) {
-	var prev = nextTreeNode(current, -1);
-	if (prev != null)
-		setSelectedItem(prev);
+var keyPressUp = function() {
+	if (!selected())
+		return;
+
+	var next = selected().tree(-1);
+	if (next)
+		next.select();
+
 }
 
-var keyPressDown = function(current) {
-	var next = nextTreeNode(current, 1);
-	if (next != null)
-		setSelectedItem(next);
-	else if (hasChildren(current)) {
+var keyPressDown = function() {
+	if (!selected()) {
+		roots().at(0).select();
+		return;
+	}
+	var next = selected().tree(1);
+	if (next)
+		next.select();
+	else if (selected().children().has()) {
 		/**
 		 * If we're at the bottom of the tree, and the current item has children
 		 * then it is closed, so let's open it.
 		 */
-		setOpen(current, true);
+		selected().open(true);
 	}
 }
 
-var keyPressRight = function(current) {
-	if (isOpen(current))
-		setSelectedItem(getFirst(childrenOf(current)));
-	else if (hasChildren(current))
-		setOpen(current, true);
+var keyPressRight = function() {
+	if (selected().open())
+		selected().children().first().select();
+	else if (selected().children().has())
+		selected().open(true);
 }
 
-var keyPressLeft = function(current) {
-	if (isOpen(current))
-		setOpen(current, false);
+var keyPressLeft = function() {
+	if (selected().open())
+		selected().open(false);
 	else
-		setSelectedItem(getParent(current));
+		selected().parent().select();
 }

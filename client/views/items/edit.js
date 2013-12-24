@@ -1,25 +1,28 @@
 Template.edit.item = function () {
-	return getSelectedItem();
+	return selected() == null ? null : selected().data();
 }
 Template.edit.version = function () {
-	return getLiveVersion(getSelectedItem());
+	return selected() == null ? null : selected().live().data();
 }
+
 //Template.attribute.preserve({
 //	'input[id]': function (node) { return node.id; }
 //});
 Template.version.events({
-	'click button': function() {
-
+	'click button': function(e) {
+		e.preventDefault();
 		var updates = {};
 		var self = this;
+		var holder = $(e.currentTarget).closest('form');
 		$.each(this.attributes, function(i){
 			var attribute = self.attributes[i];
-			var newValue = $('#attributesEditControls #edit_' + self._id + '_' + attribute.name).val();
+			var newValue = holder.find('.form-control[data-name="'+attribute.name+'"]').val();
 			var oldValue = attribute.value;
 			if (newValue != oldValue)
 				updates['attributes.' + i + '.value'] = newValue;
 		});
-		Versions.update({_id: this._id}, {$set: updates});
-
+		if (Object.keys(updates).length > 0)
+			Versions.update({_id: this._id}, {$set: updates});
+		e.stopImmediatePropagation();
 	}
 });

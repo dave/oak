@@ -71,10 +71,10 @@ Meteor.startup(function () {
 					{
 						var tiles = insert(faces, {type: 'list', name: 'tiles'});
 						{
-							insert(tiles, {type: 'image', name: 'deniel'}, {attributes: {url: 'https://d2c87l0yth4zbw.cloudfront.net/i/faces/daniel.jpg', width: 300, height: 400, order: 1.0}});
-							insert(tiles, {type: 'image', name: 'martin'}, {attributes: {url: 'https://d2c87l0yth4zbw.cloudfront.net/i/faces/martin.jpg', width: 300, height: 400, order: 2.0}});
-							insert(tiles, {type: 'image', name: 'sean'},   {attributes: {url: 'https://d2c87l0yth4zbw.cloudfront.net/i/faces/sean.jpg',   width: 300, height: 400, order: 3.0}});
-							insert(tiles, {type: 'image', name: 'kate'},   {attributes: {url: 'https://d2c87l0yth4zbw.cloudfront.net/i/faces/kate.jpg',   width: 300, height: 400, order: 2.5}});
+							insert(tiles, {type: 'image', name: 'daniel'}, {order: 1.0, attributes: {url: 'https://d2c87l0yth4zbw.cloudfront.net/i/faces/daniel.jpg', width: 300, height: 400}});
+							insert(tiles, {type: 'image', name: 'martin'}, {order: 2.0, attributes: {url: 'https://d2c87l0yth4zbw.cloudfront.net/i/faces/martin.jpg', width: 300, height: 400}});
+							insert(tiles, {type: 'image', name: 'sean'},   {order: 3.0, attributes: {url: 'https://d2c87l0yth4zbw.cloudfront.net/i/faces/sean.jpg',   width: 300, height: 400}});
+							insert(tiles, {type: 'image', name: 'kate'},   {order: 2.5, attributes: {url: 'https://d2c87l0yth4zbw.cloudfront.net/i/faces/kate.jpg',   width: 300, height: 400}});
 						}
 
 					}

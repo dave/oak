@@ -1,11 +1,11 @@
 <template name="edit">
-	<div class="content col-xs-9">
+	<div class="template-edit content col-xs-9">
 		{{#if item}}
 		<h2>
 			{{item.name}}
 		</h2>
 		<p>
-			{{item.name}} is a {{item.type}}
+			type: {{item.type}}
 		</p>
 		{{#with version}}
 		{{> version }}
@@ -15,17 +15,16 @@
 </template>
 
 <template name="version">
-	<p>
-		version: {{version}}
-	</p>
-	<div id="attributesEditControls">
-		{{#each attributes}}
+	<form role="form">
 		<p>
-			{{name}}: <input type="text" id="edit_{{../_id}}_{{name}}" value="{{value}}">
+			version: {{version}}
 		</p>
+		{{#each attributes}}
+		<div class="form-group">
+			<label for="{{../_id}}_{{name}}">{{name}}</label>
+			<input type="text" id="{{../_id}}_{{name}}" class="form-control" data-name="{{name}}" placeholder="{{name}}" value="{{value}}">
+		</div>
 		{{/each}}
-	</div>
-	<p>
-		<button>Save</button>
-	</p>
+		<button class="btn btn-default">Save</button>
+	</form>
 </template>
