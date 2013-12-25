@@ -30,9 +30,9 @@ Meteor.startup(function () {
 			}
 			version = extend({}, versionDefaults, version);
 
-			var newAttributes = [];
+			var newAttributes = {};
 			foreach(version.attributes, function(value, key) {
-				newAttributes.push({name: key, value: value});
+				newAttributes[key] = {name: key, value: value};
 			});
 			version.attributes = newAttributes;
 
