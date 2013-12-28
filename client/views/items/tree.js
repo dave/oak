@@ -57,6 +57,8 @@ Template.outer.rendered = function () {
 		if (document.activeElement.tagName != 'BODY')
 			return;
 
+		e.preventDefault();
+
 		if (e.keyCode == 40)
 			keyPressDown();
 		else if (e.keyCode == 38)

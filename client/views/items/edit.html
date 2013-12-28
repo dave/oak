@@ -1,15 +1,17 @@
 <template name="edit">
 	<div class="template-edit content col-xs-9">
 		{{#if item}}
-		<h2>
+		<h2 class="name">
 			{{item.name}}
 		</h2>
 		<p>
-			type: {{item.type}}
+			Type: {{item.type}}
 		</p>
-		{{#with version}}
-		{{> version }}
-		{{/with}}
+
+		{{#with version}}{{> version }}{{/with}}
+
+		{{> children }}
+
 		{{/if}}
 	</div>
 </template>
@@ -17,7 +19,7 @@
 <template name="version">
 	<form role="form">
 		<p>
-			version: {{version}}
+			Version: {{version}}
 		</p>
 
 		{{#if type.attributeArray}}
@@ -28,17 +30,101 @@
 			<input type="text" id="{{../_id}}_{{this.name}}" class="form-control" data-name="{{this.name}}" placeholder="{{this.name}}" value="{{attribute ../this}}">
 		</div>
 		{{/each}}
-		{{/if}}
 
 		<button class="btn btn-default">Save</button>
-
-		{{#if type.childArray}}
-		<h2>Children</h2>
-		{{#each type.childArray}}
-		<p>
-			{{this.name}} {{this.types}}
-		</p>
-		{{/each}}
 		{{/if}}
+
 	</form>
+</template>
+
+<template name="children">
+	{{#if $or type.childArray type.list}}
+	<h2>Children</h2>
+	{{/if}}
+
+	{{#if type.childArray}}
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Holds</th>
+				<th>Type</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each type.childArray}}
+			{{> childRow}}
+			{{/each}}
+		</tbody>
+	</table>
+	{{/if}}
+
+	{{#if type.list}}
+	<p>
+		List holds: {{type.list.types}}
+	</p>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Type</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each children}}
+			{{> listChildRow}}
+			{{/each}}
+		</tbody>
+	</table>
+	<p>
+		<button type="button" class="btn btn-default">Add</button>
+	</p>
+	{{/if}}
+</template>
+
+<template name="listChildRow">
+	<tr>
+		<td>
+			<a href="{{pathFor 'items'}}" class="child-link">{{this.name}}</a>
+		</td>
+		<td>
+			{{this.type}}
+		</td>
+		<td>
+			<button type="button" class="btn btn-default btn-xs">Delete</button>
+		</td>
+	</tr>
+</template>
+
+<template name="childRow">
+	<tr>
+		<td>
+			{{#if child}}
+			<a href="{{pathFor 'items' child}}" class="child-link">{{this.name}}</a>
+			{{else}}
+			{{this.name}}
+			{{/if}}
+		</td>
+		<td>
+			<ul class="comma-seperated">
+				{{#each this.types}}
+				<li>{{this.type}}</li>
+				{{/each}}
+			</ul>
+		</td>
+		<td>
+			{{#if child}}
+			{{child.type.name}}
+			{{/if}}
+		</td>
+		<td class="child-actions">
+			{{#if child}}
+			<button type="button" class="btn btn-default btn-xs">Delete</button>
+			{{else}}
+			<button type="button" class="btn btn-default btn-xs">Add</button>
+			{{/if}}
+		</td>
+	</tr>
 </template>
