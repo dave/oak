@@ -1,6 +1,6 @@
 
 Template.edit.item = function () {
-	return selected() == null ? null : selected().data();
+	return selected() == null ? null : selected();
 }
 
 Template.edit.version = function () {
@@ -14,17 +14,19 @@ Template.version.attribute = function(v){
 Template.children.children = function () {
 	return selected() == null ? null : selected().children().cursor();
 }
+
 Template.children.type = Template.version.type = function () {
 	return types[selected().type().name];
 }
 
-
 Template.childRow.hasChild = function() {
 	return selected().child(this.name) != null;
 }
+
 Template.childRow.child = function() {
 	return selected().child(this.name);
 }
+
 Template.listChildRow.events({
 	'click a.child-link': function(e) {
 		e.preventDefault();
@@ -32,6 +34,7 @@ Template.listChildRow.events({
 		e.stopImmediatePropagation();
 	}
 });
+
 Template.childRow.events({
 	'click a.child-link': function(e) {
 		e.preventDefault();
@@ -41,6 +44,7 @@ Template.childRow.events({
 		e.stopImmediatePropagation();
 	}
 });
+
 //Template.attribute.preserve({
 //	'input[id]': function (node) { return node.id; }
 //});

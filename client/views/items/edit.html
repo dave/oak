@@ -5,8 +5,13 @@
 			{{item.name}}
 		</h2>
 		<p>
-			Type: {{item.type}}
+			Type: {{item.type.name}}
 		</p>
+		{{#if item.hints}}
+		<p>
+			Hints: {{print item.hints}}
+		</p>
+		{{/if}}
 
 		{{#with version}}{{> version }}{{/with}}
 
