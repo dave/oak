@@ -51,7 +51,7 @@ Meteor.startup(function () {
 				{
 					var hero = insert(landing, {type: 'section_hero', name: 'hero'});
 					{
-						insert(hero, {type: 'image', name: 'hero'}, {attributes: {url: 'https://d2c87l0yth4zbw.cloudfront.net/i/home/intro-ipad.jpg', width: 2000, height: 800}});
+						insert(hero, {type: 'image', name: 'image'}, {attributes: {url: 'https://d2c87l0yth4zbw.cloudfront.net/i/home/intro-ipad.jpg', width: 2000, height: 800}});
 						insert(hero, {type: 'text', name: 'header'}, {attributes: {text: 'Soundtrack your life'}});
 						insert(hero, {type: 'text', name: 'subhead'}, {attributes: {text: 'Let Spotify bring you the right music for every mood and moment.'}});
 					}
@@ -62,7 +62,7 @@ Meteor.startup(function () {
 					var body = insert(features, {type: 'text', name: 'body'}, {attributes: {text: 'Music brings people together. That’s why Spotify is so social. Share music on Spotify, Facebook, Twitter, your blog and via email. You can follow other cool people too. When they find great new music, so do you.'}});
 					var intro = insert(features, {type: 'section_hero', name: 'intro'});
 					{
-						insert(intro, {type: 'image', name: 'hero'}, {attributes: {url: 'https://d2c87l0yth4zbw.cloudfront.net/i/home/intro-bike.jpg', width: 2000, height: 800}});
+						insert(intro, {type: 'image', name: 'image'}, {attributes: {url: 'https://d2c87l0yth4zbw.cloudfront.net/i/home/intro-bike.jpg', width: 2000, height: 800}});
 						insert(intro, {type: 'text', name: 'header'}, {attributes: {text: 'Build your collection'}});
 						insert(intro, {type: 'text', name: 'subhead'}, {attributes: {text: 'It’s easy to build a personal collection by creating your own playlists.'}});
 					}
