@@ -48,7 +48,7 @@ Template.main.selected = function () {
 };
 
 Template.main.order = function () {
-	return item(this) == null ? '0' : item(this).live().order();
+	return item(this) == null ? '0' : item(this).order();
 }
 
 Template.outer.rendered = function () {

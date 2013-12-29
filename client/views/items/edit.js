@@ -3,19 +3,15 @@ Template.edit.item = function () {
 	return selected() == null ? null : selected();
 }
 
-Template.edit.version = function () {
-	return selected() == null ? null : selected().live().data();
-}
-
-Template.version.attribute = function(v){
-	return version(v).attribute(this.name) || '';
+Template.attributes.attribute = function(){
+	return selected().attribute(this.name) || '';
 }
 
 Template.children.children = function () {
 	return selected() == null ? null : selected().children().cursor();
 }
 
-Template.children.type = Template.version.type = function () {
+Template.children.type = Template.attributes.type = function () {
 	return types[selected().type().name];
 }
 
@@ -49,23 +45,22 @@ Template.childRow.events({
 //	'input[id]': function (node) { return node.id; }
 //});
 
-Template.version.events({
+Template.attributes.events({
 	'click button': function(e) {
 		e.preventDefault();
 
-		var v = version(this);
-		var i = v.item();
+		var i = item(this);
 
 		var updates = {};
 		var holder = $(e.currentTarget).closest('form');
 		$.each(i.type().attributes, function(name){
 			var newValue = holder.find('.form-control[data-name="'+name+'"]').val();
-			var oldValue = v.attribute(name);
+			var oldValue = i.attribute(name);
 			if (newValue != oldValue)
 				updates['attributes.' + name + '.value'] = newValue;
 		});
 		if (Object.keys(updates).length > 0)
-			Versions.update({_id: this._id}, {$set: updates});
+			Items.update({_id: this._id}, {$set: updates});
 		e.stopImmediatePropagation();
 	}
 });

@@ -13,7 +13,7 @@
 		</p>
 		{{/if}}
 
-		{{#with version}}{{> version }}{{/with}}
+		{{> attributes }}
 
 		{{> children }}
 
@@ -21,24 +21,18 @@
 	</div>
 </template>
 
-<template name="version">
+<template name="attributes">
 	<form role="form">
-		<p>
-			Version: {{version}}
-		</p>
-
 		{{#if type.attributeArray}}
 		<h2>Attributes</h2>
 		{{#each type.attributeArray}}
 		<div class="form-group">
 			<label for="{{../_id}}_{{this.name}}">{{this.name}}</label>
-			<input type="text" id="{{../_id}}_{{this.name}}" class="form-control" data-name="{{this.name}}" placeholder="{{this.name}}" value="{{attribute ../this}}">
+			<input type="text" id="{{../_id}}_{{this.name}}" class="form-control" data-name="{{this.name}}" placeholder="{{this.name}}" value="{{attribute}}">
 		</div>
 		{{/each}}
-
 		<button class="btn btn-default">Save</button>
 		{{/if}}
-
 	</form>
 </template>
 
