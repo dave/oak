@@ -4,20 +4,21 @@ var foreach = Meteor.require('foreach');
 Meteor.startup(function () {
 	Items.remove({});
 	Changes.remove({});
+	Tweaks.remove({});
 	if (Items.find().count() === 0) {
 		var change = Changes.insert({});
 
 		var insert = function (parent, item) {
-			var item_id = new Meteor.Collection.ObjectID()._str;
+			var id = new Meteor.Collection.ObjectID()._str;
 
-			var itemDefaults = {
-				_id: item_id,
+			var defaults = {
+				_id: id,
 				parent: parent,
 				enabled: true,
 				order: 1.0,
 				attributes: {}
 			};
-			item = extend({}, itemDefaults, item);
+			item = extend({}, defaults, item);
 
 			/**
 			 * Ugh we can't {{#each}} around an object - only an array - so we have to create an array
@@ -29,7 +30,7 @@ Meteor.startup(function () {
 			item.attributes = newAttributes;
 
 			Items.insert(item);
-			return item_id;
+			return id;
 		}
 
 		{
@@ -71,5 +72,6 @@ Meteor.startup(function () {
 				}
 			}
 		}
+
 	}
 });

@@ -1,0 +1,1 @@
+Tweaks = new Meteor.Collection("tweaks");
