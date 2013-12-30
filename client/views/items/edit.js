@@ -26,7 +26,7 @@ Template.childRow.child = function() {
 Template.listChildRow.events({
 	'click a.child-link': function(e) {
 		e.preventDefault();
-		item(this).select().open(true).parent().open(true);
+		Item(this).select().open(true).parent().open(true);
 		e.stopImmediatePropagation();
 	}
 });
@@ -49,12 +49,12 @@ Template.attributes.events({
 	'click button': function(e) {
 		e.preventDefault();
 
-		var i = item(this);
+		var i = Item(this);
 
 		var updates = {};
 		var holder = $(e.currentTarget).closest('form');
 		$.each(i.type().attributes, function(name){
-			var newValue = holder.find('.form-control[data-name="'+name+'"]').val();
+			var newValue = holder.find('.form-control[data-name="' + name + '"]').val();
 			var oldValue = i.attribute(name);
 			if (newValue != oldValue)
 				updates['attributes.' + name + '.value'] = newValue;

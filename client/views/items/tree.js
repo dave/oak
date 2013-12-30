@@ -3,15 +3,15 @@ Template.tree.getRoot = function () {
 }
 
 Template.main.getChildren = function () {
-	return item(this).children().cursor();
+	return Item(this).children().cursor();
 }
 
 Template.main.hasChildren = function () {
-	return item(this).children().has();
+	return Item(this).children().has();
 }
 
 Template.main.isOpen = function () {
-	return this._id == null || item(this).open();
+	return this._id == null || Item(this).open();
 }
 
 Template.main.isItem = function () {
@@ -20,10 +20,10 @@ Template.main.isItem = function () {
 
 Template.main.glyph = function () {
 
-	if (!item(this).children().has())
+	if (!Item(this).children().has())
 		return 'glyphicon-unchecked';
 
-	if (item(this).open())
+	if (Item(this).open())
 		return 'glyphicon-collapse-down';
 
 	return 'glyphicon-expand';
@@ -33,22 +33,22 @@ Template.main.glyph = function () {
 Template.main.events({
 	'click .item-icon': function (e) {
 		e.preventDefault();
-		item(this).select().open('toggle');
+		Item(this).select().open('toggle');
 		e.stopImmediatePropagation();
 	},
 	'click .item-label': function (e) {
 		e.preventDefault();
-		item(this).select().open(true);
+		Item(this).select().open(true);
 		e.stopImmediatePropagation();
 	}
 });
 
 Template.main.selected = function () {
-	return item(this).selected() ? "selected" : '';
+	return Item(this).selected() ? "selected" : '';
 };
 
 Template.main.order = function () {
-	return item(this) == null ? '0' : item(this).order();
+	return Item(this) == null ? '0' : Item(this).order();
 }
 
 Template.outer.rendered = function () {
