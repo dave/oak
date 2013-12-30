@@ -49,13 +49,13 @@ Template.attributes.events({
 	'click button': function(e) {
 		e.preventDefault();
 
-		var i = Item(this);
+		var item = Item(this);
 
 		var updates = {};
 		var holder = $(e.currentTarget).closest('form');
-		$.each(i.type().attributes, function(name){
+		$.each(item.type().attributes, function(name){
 			var newValue = holder.find('.form-control[data-name="' + name + '"]').val();
-			var oldValue = i.attribute(name);
+			var oldValue = item.attribute(name);
 			if (newValue != oldValue)
 				updates['attributes.' + name + '.value'] = newValue;
 		});
