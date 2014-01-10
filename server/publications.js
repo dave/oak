@@ -5,3 +5,7 @@ Meteor.publish('items', function() {
 Meteor.publish('changes', function() {
 	return Changes.find();
 });
+
+Meteor.publish('tweaks', function() {
+	return Tweaks.find();
+});

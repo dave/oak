@@ -2,9 +2,9 @@ var extend = Meteor.require('extend');
 var foreach = Meteor.require('foreach');
 
 Meteor.startup(function () {
-	Items.remove({});
-	Changes.remove({});
-	Tweaks.remove({});
+	//Items.remove({});
+	//Changes.remove({});
+	//Tweaks.remove({});
 	if (Items.find().count() === 0) {
 		var change = Changes.insert({});
 
@@ -14,6 +14,7 @@ Meteor.startup(function () {
 			var defaults = {
 				_id: id,
 				parent: parent,
+				tweak: null,
 				enabled: true,
 				order: 1.0,
 				attributes: {}

@@ -1,6 +1,6 @@
 
 Template.edit.item = function () {
-	return selected() == null ? null : selected();
+	return selected();
 }
 
 Template.attributes.attribute = function(){
@@ -56,11 +56,29 @@ Template.attributes.events({
 		$.each(item.type().attributes, function(name){
 			var newValue = holder.find('.form-control[data-name="' + name + '"]').val();
 			var oldValue = item.attribute(name);
-			if (newValue != oldValue)
-				updates['attributes.' + name + '.value'] = newValue;
+			if (newValue != oldValue) {
+				updates['attributes.' + name + '.changes'] = changesets.text.constructChangeset(oldValue, newValue);
+			}
 		});
-		if (Object.keys(updates).length > 0)
-			Items.update({_id: this._id}, {$set: updates});
+		if (Object.keys(updates).length > 0) {
+			var change = getChange();
+			var data = {itemId: item.id(), changeId: change.id(), previousId: item.tweakId(), updates: updates};
+
+			var tweak = Tweak({change: change.id(), item: item.id()});
+			if (tweak) {
+				Tweaks.update({_id: tweak.id()}, {$push: data.updates});
+			}
+			else {
+				Meteor.call(
+					'tweak',
+					data,
+					function(error, a) {
+						if (error)
+							return alert(error.reason);
+					}
+				);
+			}
+		}
 		e.stopImmediatePropagation();
 	}
 });
