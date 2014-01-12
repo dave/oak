@@ -1,10 +1,10 @@
-var extend = Meteor.require('extend');
-var foreach = Meteor.require('foreach');
-
 Meteor.startup(function () {
+	Future = Npm.require('fibers/future');
+
 	//Items.remove({});
 	//Changes.remove({});
 	//Tweaks.remove({});
+	return;
 	if (Items.find().count() === 0) {
 		var change = Changes.insert({});
 
@@ -19,13 +19,13 @@ Meteor.startup(function () {
 				order: 1.0,
 				attributes: {}
 			};
-			item = extend({}, defaults, item);
+			item = _.extend({}, defaults, item);
 
 			/**
 			 * Ugh we can't {{#each}} around an object - only an array - so we have to create an array
 			 */
 			var newAttributes = {};
-			foreach(item.attributes, function(value, key) {
+			_.each(item.attributes, function(value, key) {
 				newAttributes[key] = {name: key, value: value};
 			});
 			item.attributes = newAttributes;

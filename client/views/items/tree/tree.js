@@ -33,7 +33,7 @@ Template.main.glyph = function () {
 Template.main.events({
 	'click .item-icon': function (e) {
 		e.preventDefault();
-		Item(this).select().open('toggle');
+		Item(this).select().toggle();
 		e.stopImmediatePropagation();
 	},
 	'click .item-label': function (e) {
@@ -48,7 +48,7 @@ Template.main.selected = function () {
 };
 
 Template.main.order = function () {
-	return Item(this) == null ? '0' : Item(this).order();
+	return Item(this) == null ? '0' : Item(this).attribute('_order');
 }
 
 Template.outer.rendered = function () {

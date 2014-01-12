@@ -53,7 +53,7 @@ Template.attributes.events({
 
 		var updates = {};
 		var holder = $(e.currentTarget).closest('form');
-		$.each(item.type().attributes, function(name){
+		_.each(item.type().attributes, function(name){
 			var newValue = holder.find('.form-control[data-name="' + name + '"]').val();
 			var oldValue = item.attribute(name);
 			if (newValue != oldValue) {

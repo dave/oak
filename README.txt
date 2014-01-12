@@ -26,3 +26,15 @@ mrt --settings dev.json
  {{$not a}}
  {{$exists a}} a != undefined
  {{getText notation}} translation!!
+
+
+===================================
+To install testing framework
+brew update
+brew install mongodb
+brew install phantomjs
+sudo npm install -g laika
+-----------------------------------
+Sart mongodb for testing framework:
+mongod --smallfiles --noprealloc --nojournal
+===================================
