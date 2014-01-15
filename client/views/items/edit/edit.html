@@ -7,9 +7,9 @@
 		<p>
 			Type: {{item.type.name}}
 		</p>
-		{{#if item.hints}}
+		{{#if $has item.hints}}
 		<p>
-			Hints: {{print item.hints}}
+			Hints: {{$print item.hints}}
 		</p>
 		{{/if}}
 
@@ -27,8 +27,12 @@
 		<h2>Attributes</h2>
 		{{#each type.attributeArray}}
 		<div class="form-group">
-			<label for="{{../_id}}_{{this.name}}">{{this.name}}</label>
-			<input type="text" id="{{../_id}}_{{this.name}}" class="form-control" data-name="{{this.name}}" placeholder="{{this.name}}" value="{{attribute}}">
+			<label>{{this.name}}</label>
+			{{#if $eq this.type 'string'}}
+			<textarea type="text" class="form-control" data-name="{{this.name}}" placeholder="{{this.name}}">{{attribute}}</textarea>
+			{{else}}
+			<input type="text" class="form-control" data-name="{{this.name}}" placeholder="{{this.name}}" value="{{attribute}}">
+			{{/if}}
 		</div>
 		{{/each}}
 		<button class="btn btn-default">Save</button>
@@ -61,7 +65,7 @@
 
 	{{#if type.list}}
 	<p>
-		List holds: {{type.list.types}}
+		List holds: {{$print listHolds}}
 	</p>
 	<table class="table table-striped">
 		<thead>

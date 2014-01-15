@@ -2,9 +2,10 @@
   "packages": {
     "bootstrap-3": {},
     "handlebar-helpers": {},
-    "npm": {},
     "accounts-ui-bootstrap-3": {},
     "iron-router": {},
-    "jquery-ui": {}
+    "jquery-ui": {},
+    "codemirror": {},
+    "npm": {}
   }
 }

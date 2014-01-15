@@ -9,9 +9,9 @@ preserve-inputs
 bootstrap-3
 handlebar-helpers
 jquery
-npm
 accounts-ui-bootstrap-3
 accounts-google
 iron-router
 jquery-ui
-changesets
+codemirror
+npm

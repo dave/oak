@@ -4,10 +4,11 @@
     "basePackages": {
       "bootstrap-3": {},
       "handlebar-helpers": {},
-      "npm": {},
       "accounts-ui-bootstrap-3": {},
       "iron-router": {},
-      "jquery-ui": {}
+      "jquery-ui": {},
+      "codemirror": {},
+      "npm": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -20,11 +21,6 @@
         "tag": "v0.0.9",
         "commit": "71e94c99462b8801a34c5363510758b6ff5f5ac7"
       },
-      "npm": {
-        "git": "https://github.com/arunoda/meteor-npm.git",
-        "tag": "v0.2.6",
-        "commit": "177ab6118de5bf8cffb19481343d5762ff7a2aaf"
-      },
       "accounts-ui-bootstrap-3": {
         "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
         "tag": "v0.2.4",
@@ -32,13 +28,23 @@
       },
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
-        "tag": "v0.6.1",
-        "commit": "4e1ee0581d68bff422a915dacb0bd30eae10fe08"
+        "tag": "v0.6.2",
+        "commit": "ce56e58b45624dce992490f3a1c10f10d3948bae"
       },
       "jquery-ui": {
         "git": "https://github.com/TimHeckel/meteor-jquery-ui.git",
         "tag": "v1.9.2",
         "commit": "c437d45edcf1367df8d5ffa8bad2867758030bd2"
+      },
+      "codemirror": {
+        "git": "https://github.com/digioak/meteor-codemirror.git",
+        "tag": "v0.0.2",
+        "commit": "39185b6e97c485e7cd65a2ef84190923c050b0d8"
+      },
+      "npm": {
+        "git": "https://github.com/arunoda/meteor-npm.git",
+        "tag": "v0.2.6",
+        "commit": "177ab6118de5bf8cffb19481343d5762ff7a2aaf"
       }
     }
   }

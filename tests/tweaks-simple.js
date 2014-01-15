@@ -1,7 +1,8 @@
 var assert = require('assert');
 
+/*
 suite('Tweaks', function() {
-	test('in the server', function(done, server, client) {
+	test('create a couple of tweaks and make sure the OT reconstruction works', function(done, server, client) {
 
 		server.eval(function() {
 			Tweaks.find().observe({
@@ -46,3 +47,4 @@ suite('Tweaks', function() {
 
 	});
 });
+*/
