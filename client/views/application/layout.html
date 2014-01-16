@@ -47,8 +47,8 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Items</a></li>
-				<li><a href="#">Changes</a></li>
+				<li class="{{active 'items' 'detail'}}"><a href="{{pathFor 'items'}}">Items</a></li>
+				<li class="{{active 'changes'}}"><a href="{{pathFor 'changes'}}">Changes</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</nav>

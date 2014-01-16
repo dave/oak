@@ -15,6 +15,13 @@
 		<div class="item-holder">
 			<span class="item-icon glyphicon {{glyph}}"></span>
 			<p id="{{_id}}" class="item-label">
+				{{#if dirty}}
+				<span class="dirty-icon glyphicon glyphicon-star"></span>
+				{{else}}
+					{{#if hasDirtyChildren}}
+					<span class="dirty-icon glyphicon glyphicon-star-empty"></span>
+					{{/if}}
+				{{/if}}
 				<a href="{{pathFor 'items'}}">{{name}}</a>
 			</p>
 		</div>

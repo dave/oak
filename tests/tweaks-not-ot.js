@@ -2,7 +2,7 @@ var assert = require('assert');
 
 /**
  * So changesets is broken and ot.js is time consuming. For now, lets just record the whole attrbiture set on each save.
-
+ */
 
 
 suite('Tweaks', function() {
@@ -39,4 +39,3 @@ suite('Tweaks', function() {
 
 	});
 });
- */

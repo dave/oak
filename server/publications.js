@@ -6,6 +6,10 @@ Meteor.publish('changes', function() {
 	return Changes.find();
 });
 
+Meteor.publish('versions', function() {
+	return Versions.find();
+});
+
 Meteor.publish('tweaks', function() {
 	return Tweaks.find();
 });

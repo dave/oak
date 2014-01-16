@@ -2,34 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="573ac87f-7d61-4706-b213-92a84a152a05" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/changesets.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/ot/ot.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/tweaks-more.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/tweaks-not-ot-more.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/tweaks-not-ot.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/changesets" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/items.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/_classes.js" afterPath="$PROJECT_DIR$/lib/classes/_classes.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/collection.js" afterPath="$PROJECT_DIR$/lib/classes/collection.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/genericObject.js" afterPath="$PROJECT_DIR$/lib/classes/generic-object.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/helpers.js" afterPath="$PROJECT_DIR$/lib/classes/helpers.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/router.js" afterPath="$PROJECT_DIR$/lib/application/router.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/types.js" afterPath="$PROJECT_DIR$/lib/_types.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/tweaks.js" afterPath="$PROJECT_DIR$/tests/tweaks-simple.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/.gitignore" afterPath="$PROJECT_DIR$/packages/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/application/_collections.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/changes/changes.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/changes/changes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/views/detail/detail.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/ot/ot.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/collections/changes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/collections/items.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/collections/tweaks.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/collections/versions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/changesets.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/items/changeBar/changeBar.html" afterPath="$PROJECT_DIR$/client/views/changeBar/changeBar.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/items/changeBar/changeBar.js" afterPath="$PROJECT_DIR$/client/views/changeBar/changeBar.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/items/edit/edit.html" afterPath="$PROJECT_DIR$/client/views/edit/edit.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/items/edit/edit.js" afterPath="$PROJECT_DIR$/client/views/edit/edit.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/items/tree/tree.html" afterPath="$PROJECT_DIR$/client/views/tree/tree.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/views/items/tree/tree.js" afterPath="$PROJECT_DIR$/client/views/tree/tree.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/tweaks-more.js" afterPath="$PROJECT_DIR$/tests/tweaks-ot-more.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/tests/tweaks-simple.js" afterPath="$PROJECT_DIR$/tests/tweaks-ot-simple.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/change.js" afterPath="$PROJECT_DIR$/lib/change.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/items/edit/edit.html" afterPath="$PROJECT_DIR$/client/views/items/edit/edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/items/edit/edit.js" afterPath="$PROJECT_DIR$/client/views/items/edit/edit.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/fixtures.js" afterPath="$PROJECT_DIR$/server/fixtures.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/helpers.js" afterPath="$PROJECT_DIR$/client/helpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/item-type.js" afterPath="$PROJECT_DIR$/lib/item-type.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/classes/helpers.js" afterPath="$PROJECT_DIR$/lib/classes/helpers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/item-tree.js" afterPath="$PROJECT_DIR$/lib/item-tree.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/item.js" afterPath="$PROJECT_DIR$/lib/item.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages.json" afterPath="$PROJECT_DIR$/packages.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/packages" afterPath="$PROJECT_DIR$/.meteor/packages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smart.json" afterPath="$PROJECT_DIR$/smart.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smart.lock" afterPath="$PROJECT_DIR$/smart.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tweak.js" afterPath="$PROJECT_DIR$/lib/tweak.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/version.js" afterPath="$PROJECT_DIR$/lib/version.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/layout.html" afterPath="$PROJECT_DIR$/client/views/application/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/application/layout.js" afterPath="$PROJECT_DIR$/client/views/application/layout.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/stylesheets/main.css" afterPath="$PROJECT_DIR$/client/stylesheets/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/publications.js" afterPath="$PROJECT_DIR$/server/publications.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/application/router.js" afterPath="$PROJECT_DIR$/lib/application/router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/tweaks-not-ot.js" afterPath="$PROJECT_DIR$/tests/tweaks-not-ot.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="daves-cms.iws" />
@@ -54,9 +55,18 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="edit.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/views/items/edit/edit.js">
+        <entry file="file://$PROJECT_DIR$/client/views/edit/edit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="626" selection-end="626" vertical-scroll-proportion="0.63192904" vertical-offset="135" max-vertical-offset="1335">
+            <state line="49" column="3" selection-start="1151" selection-end="1151" vertical-scroll-proportion="0.3270366" vertical-offset="458" max-vertical-offset="1305">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/edit/edit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="47" selection-start="879" selection-end="879" vertical-scroll-proportion="-10.541667" vertical-offset="302" max-vertical-offset="2115">
               <folding />
             </state>
           </provider>
@@ -80,22 +90,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/tests/changesets.js" />
-        <option value="$PROJECT_DIR$/.meteor/local/build/programs/client/app/lib/version.js" />
-        <option value="$PROJECT_DIR$/tests/tweaks-simple.js" />
-        <option value="$PROJECT_DIR$/tests/tweaks-not-ot.js" />
-        <option value="$PROJECT_DIR$/tests/tweaks-not-ot-more.js" />
-        <option value="$PROJECT_DIR$/tests/tweaks-more.js" />
-        <option value="$PROJECT_DIR$/lib/tweak.js" />
-        <option value="$PROJECT_DIR$/lib/change.js" />
-        <option value="$PROJECT_DIR$/lib/classes/helpers.js" />
-        <option value="$PROJECT_DIR$/lib/version.js" />
-        <option value="$PROJECT_DIR$/lib/item.js" />
-        <option value="$PROJECT_DIR$/client/views/items/edit/edit.js" />
-        <option value="$PROJECT_DIR$/lib/item-type.js" />
-        <option value="$PROJECT_DIR$/client/views/items/edit/edit.html" />
-        <option value="$PROJECT_DIR$/client/helpers.js" />
+        <option value="$PROJECT_DIR$/client/views/changes/changes.js" />
+        <option value="$PROJECT_DIR$/server/publications.js" />
         <option value="$PROJECT_DIR$/server/fixtures.js" />
+        <option value="$PROJECT_DIR$/tests/tweaks-not-ot.js" />
+        <option value="$PROJECT_DIR$/collections/items.js" />
+        <option value="$PROJECT_DIR$/collections/changes.js" />
+        <option value="$PROJECT_DIR$/collections/versions.js" />
+        <option value="$PROJECT_DIR$/collections/tweaks.js" />
+        <option value="$PROJECT_DIR$/lib/application/_collections.js" />
+        <option value="$PROJECT_DIR$/client/views/tree/tree.html" />
+        <option value="$PROJECT_DIR$/client/views/tree/tree.js" />
+        <option value="$PROJECT_DIR$/lib/change.js" />
+        <option value="$PROJECT_DIR$/lib/item.js" />
+        <option value="$PROJECT_DIR$/lib/classes/helpers.js" />
+        <option value="$PROJECT_DIR$/client/views/edit/edit.html" />
+        <option value="$PROJECT_DIR$/client/views/edit/edit.js" />
       </list>
     </option>
   </component>
@@ -104,10 +114,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="34" />
-    <option name="y" value="22" />
-    <option name="width" value="1245" />
-    <option name="height" value="778" />
+    <option name="x" value="832" />
+    <option name="y" value="60" />
+    <option name="width" value="1267" />
+    <option name="height" value="993" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -210,6 +220,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daves-cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daves-cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -242,7 +266,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="collections" />
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -257,6 +285,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daves-cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daves-cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tree" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -297,14 +347,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="items" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="edit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daves-cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daves-cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="detail" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daves-cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="daves-cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="changes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -363,16 +453,16 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="99" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="840" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="831" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="840" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="102" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="99" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -411,16 +501,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/views/items" />
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/collections" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/views" />
+      <recent name="$PROJECT_DIR$/client/views/changes" />
+      <recent name="$PROJECT_DIR$/client/views/items" />
+      <recent name="$PROJECT_DIR$/client/views/detail" />
       <recent name="$PROJECT_DIR$/client" />
-      <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$/lib/helpers" />
-      <recent name="$PROJECT_DIR$/lib/routing" />
-      <recent name="$PROJECT_DIR$/client/views/items/changeBar" />
     </key>
   </component>
   <component name="RunManager">
@@ -466,13 +557,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="34" y="22" width="1245" height="778" extended-state="0" />
-    <editor active="false" />
+    <frame x="832" y="60" width="1267" height="993" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27424243" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27424243" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22121212" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28224298" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -480,7 +571,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39665654" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21184321" sideWeight="0.7257576" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2113022" sideWeight="0.54242426" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -489,6 +580,27 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27424243" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22121212" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39665654" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21517931" sideWeight="0.7257576" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -500,118 +612,124 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/classes/_classes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.8560794" vertical-offset="345" max-vertical-offset="1005" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/tweaks-more.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="48" selection-start="607" selection-end="617" vertical-scroll-proportion="0.3325062" vertical-offset="181" max-vertical-offset="810">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/tweaks-not-ot-more.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="49" selection-start="292" selection-end="303" vertical-scroll-proportion="0.3325062" vertical-offset="1" max-vertical-offset="645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/tweaks-not-ot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="48" selection-start="659" selection-end="669" vertical-scroll-proportion="0.3325062" vertical-offset="241" max-vertical-offset="705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tweak.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0" vertical-offset="552" max-vertical-offset="2910">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/classes/helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="963" selection-end="963" vertical-scroll-proportion="0.7148387" vertical-offset="301" max-vertical-offset="1335">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/item.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="1650" selection-end="1650" vertical-scroll-proportion="0.931962" vertical-offset="401" max-vertical-offset="1080">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/_types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="27" selection-start="1764" selection-end="1764" vertical-scroll-proportion="2.5870254" vertical-offset="0" max-vertical-offset="4245">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/fixtures.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="33" selection-start="5694" selection-end="5694" vertical-scroll-proportion="1.0601265" vertical-offset="1325" max-vertical-offset="2250">
+        <state line="18" column="14" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="2175">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/item-type.js">
+    <entry file="file://$PROJECT_DIR$/lib/classes/generic-object.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="13" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.87025315" vertical-offset="215" max-vertical-offset="1005">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="740">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/application/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="740">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/application/_collections.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="27" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="135">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/classes/collection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/changes/changes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="26" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/item-tree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="0" selection-start="2148" selection-end="2272" vertical-scroll-proportion="0.0" vertical-offset="1125" max-vertical-offset="3225">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/items/edit/edit.html">
+    <entry file="file://$PROJECT_DIR$/client/views/tree/tree.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="18" selection-start="182" selection-end="182" vertical-scroll-proportion="0.19736843" vertical-offset="15" max-vertical-offset="2115">
+        <state line="20" column="42" selection-start="464" selection-end="480" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="645">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.txt">
+    <entry file="file://$PROJECT_DIR$/lib/item.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="12" selection-start="570" selection-end="570" vertical-scroll-proportion="0.4272152" vertical-offset="0" max-vertical-offset="675">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="3" selection-start="176" selection-end="176" vertical-scroll-proportion="0.14240506" vertical-offset="0" max-vertical-offset="632">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/version.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="55" selection-start="621" selection-end="621" vertical-scroll-proportion="0.78322786" vertical-offset="0" max-vertical-offset="1590">
-          <folding />
+        <state line="38" column="45" selection-start="912" selection-end="912" vertical-scroll-proportion="0.0" vertical-offset="70" max-vertical-offset="1890">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/change.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="16" selection-start="603" selection-end="603" vertical-scroll-proportion="0.6170886" vertical-offset="0" max-vertical-offset="1425">
+        <state line="74" column="65" selection-start="1618" selection-end="1618" vertical-scroll-proportion="0.0" vertical-offset="820" max-vertical-offset="1725">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tweak.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2910">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/items/edit/edit.js">
+    <entry file="file://$PROJECT_DIR$/lib/classes/_classes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="626" selection-end="626" vertical-scroll-proportion="0.63192904" vertical-offset="135" max-vertical-offset="1335">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/classes/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="42" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/tree/tree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="25" selection-start="1503" selection-end="1503" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1905">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/edit/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="47" selection-start="879" selection-end="879" vertical-scroll-proportion="-10.541667" vertical-offset="302" max-vertical-offset="2115">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/edit/edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="3" selection-start="1151" selection-end="1151" vertical-scroll-proportion="0.3270366" vertical-offset="458" max-vertical-offset="1305">
           <folding />
         </state>
       </provider>

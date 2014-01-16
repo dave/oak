@@ -1,0 +1,11 @@
+
+<template name="changeBar">
+	{{#if change }}
+	<nav class="col-xs-12">
+		<div class="alert alert-info">
+			You're working on change {{change.id}}
+			<button type="button" class="cancel btn btn-default btn-xs">Cancel</button>
+		</div>
+	</nav>
+	{{/if}}
+</template>

@@ -23,10 +23,13 @@ p.item-label, span.item-icon {
 	cursor: pointer;
 }
 
-nav.tree div.item-holder > span.item-icon {
+nav.tree div.item-holder > span.item-icon,
+nav.tree div.item-holder > p.item-label > span.dirty-icon {
 	opacity: 0.5;
 }
-li.selected > div.item-holder > span.item-icon, li > div.item-holder:hover > span.item-icon {
+li.selected > div.item-holder > span.item-icon,
+li.selected > div.item-holder > p.item-label > span.dirty-icon,
+li > div.item-holder:hover > span.item-icon {
 	opacity: 1.0;
 }
 div.item-holder a:hover {

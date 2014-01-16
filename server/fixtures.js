@@ -1,11 +1,11 @@
 Meteor.startup(function () {
-	Future = Npm.require('fibers/future');
-	ot = Meteor.require('ot');
+	//Future = Npm.require('fibers/future');
+	//ot = Meteor.require('ot');
 
-	Items.remove({});
-	Changes.remove({});
-	Tweaks.remove({});
-	Versions.remove({});
+	//Items.remove({});
+	//Changes.remove({});
+	//Tweaks.remove({});
+	//Versions.remove({});
 	if (Items.find().count() === 0) {
 		var change = Change(Changes.insert({}));
 
@@ -18,8 +18,6 @@ Meteor.startup(function () {
 				attributes: {}
 			};
 			item = _.extend(defaults, itemData);
-
-			console.log(JSON.stringify(item));
 
 			/**
 			 * Ugh we can't {{#each}} around an object - only an array - so we have to create an array
@@ -34,8 +32,6 @@ Meteor.startup(function () {
 			Items.insert(item);
 
 			var item = Item(id);
-
-			console.log(JSON.stringify(item.name()));
 
 			createTweak(item, change, null, null, newAttributes, function(){});
 

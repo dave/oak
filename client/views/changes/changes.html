@@ -1,0 +1,44 @@
+<template name="changes">
+	<div class="container">
+		<div class="row">
+			{{> changeList }}
+			{{> changeBar }}
+		</div>
+	</div>
+</template>
+
+<template name="changeList">
+	<div class="template-edit content col-xs-9">
+		<table class="table table-striped">
+			<thead>
+			<tr>
+				<td>Change</td>
+				<td>Actions</td>
+			</tr>
+			</thead>
+			<tbody>
+			{{#each changes}}
+			{{> changeListRow }}
+			{{/each}}
+			</tbody>
+		</table>
+	</div>
+</template>
+
+<template name="changeListRow">
+	<tr>
+		<td>
+			{{this._id}}
+		</td>
+		<td>
+			{{#if this.live}}
+				[LIVE]
+			{{else}}
+				{{#if $not selected}}
+					<button type="button" class="select btn btn-default btn-xs">Select</button>
+				{{/if}}
+				<button type="button" class="live btn btn-default btn-xs">Live</button>
+			{{/if}}
+		</td>
+	</tr>
+</template>

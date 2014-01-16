@@ -1,10 +1,14 @@
-
 Template.edit.item = function () {
 	return selected();
 }
 
 Template.attributes.attribute = function(){
-	return selected().attribute(this.name) || '';
+	if (currentChange()) {
+		return selected().attribute(this.name, currentChange()) || '';
+	}
+	else {
+		return selected().attribute(this.name) || '';
+	}
 }
 
 Template.children.listHolds = function(){
@@ -45,24 +49,18 @@ Template.childRow.events({
 	}
 });
 
-//Template.attribute.preserve({
-//	'input[id]': function (node) { return node.id; }
-//});
-
 Template.attributes.events({
-	'click button': function(e) {
+	'click button[data-action="save"]': function(e) {
 		e.preventDefault();
 
-		var item = Item(this);
+		var item = selected();
 
 		var updates = {};
 		var holder = $(e.currentTarget).closest('form');
-		_.each(item.type().attributes, function(name){
+		_.each(item.type().attributes, function(attribute, name){
 			var newValue = holder.find('.form-control[data-name="' + name + '"]').val();
-			var oldValue = item.attribute(name);
-			if (newValue != oldValue) {
-				updates['attributes.' + name + '.value'] = newValue;
-			}
+			//var oldValue = item.attribute(name);
+			updates[name] = {name: name, value: newValue};
 		});
 		if (Object.keys(updates).length > 0) {
 			var change = getChange();
@@ -72,9 +70,9 @@ Template.attributes.events({
 			if (!previous)
 				version = item.lastVersion();
 
-			createTweak(item, change, previous, version, {foo: {name: 'foo', value: 'bar more'}},
+			createTweak(item, change, previous, version, updates,
 				function(id) {
-					alert(id);
+					//alert(id);
 				}
 			)
 

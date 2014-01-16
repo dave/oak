@@ -1,1 +1,0 @@
-Changes = new Meteor.Collection("changes");

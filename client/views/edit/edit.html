@@ -35,7 +35,7 @@
 			{{/if}}
 		</div>
 		{{/each}}
-		<button class="btn btn-default">Save</button>
+		<button type="button" data-action="save" class="btn btn-default">Save</button>
 		{{/if}}
 	</form>
 </template>
@@ -82,7 +82,7 @@
 		</tbody>
 	</table>
 	<p>
-		<button type="button" class="btn btn-default">Add</button>
+		<button type="button" data-action="add" class="btn btn-default">Add</button>
 	</p>
 	{{/if}}
 </template>
@@ -96,7 +96,7 @@
 			{{this.type}}
 		</td>
 		<td>
-			<button type="button" class="btn btn-default btn-xs">Delete</button>
+			<button type="button" data-action="delete" class="btn btn-default btn-xs">Delete</button>
 		</td>
 	</tr>
 </template>
@@ -124,9 +124,9 @@
 		</td>
 		<td class="child-actions">
 			{{#if child}}
-			<button type="button" class="btn btn-default btn-xs">Delete</button>
+			<button type="button" data-action="delete" class="btn btn-default btn-xs">Delete</button>
 			{{else}}
-			<button type="button" class="btn btn-default btn-xs">Add</button>
+			<button type="button" data-action="add" class="btn btn-default btn-xs">Add</button>
 			{{/if}}
 		</td>
 	</tr>
