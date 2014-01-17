@@ -17,6 +17,7 @@ Template.changeListRow.events({
 	'click .live': function (e) {
 		e.preventDefault();
 		Change(this).live();
+		Change(this).selected(false);
 		e.stopImmediatePropagation();
 	}
 });

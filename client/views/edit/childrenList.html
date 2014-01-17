@@ -1,0 +1,38 @@
+<template name="childrenList">
+	{{#if type.list}}
+	<p>
+		List holds: {{$print listHolds}}
+	</p>
+	<table class="table table-striped">
+		<thead>
+		<tr>
+			<th>Name</th>
+			<th>Type</th>
+			<th>Actions</th>
+		</tr>
+		</thead>
+		<tbody>
+		{{#each children}}
+		{{> listChildRow}}
+		{{/each}}
+		</tbody>
+	</table>
+	<p>
+		<button type="button" data-action="add" class="btn btn-default">Add</button>
+	</p>
+	{{/if}}
+</template>
+
+<template name="listChildRow">
+	<tr>
+		<td>
+			<a href="{{pathFor 'items'}}" class="child-link">{{this.name}}</a>
+		</td>
+		<td>
+			{{this.type}}
+		</td>
+		<td>
+			<button type="button" data-action="delete" class="btn btn-default btn-xs">Delete</button>
+		</td>
+	</tr>
+</template>

@@ -55,8 +55,16 @@ Template.main.hasDirtyChildren = function () {
 	return Item(this).hasDirtyChildren(currentChange());
 };
 
+Template.main.dirtyChildrenHelper = function () {
+	return Session.get('dirtyChildrenHelper');
+}
+
 Template.main.order = function () {
 	return Item(this) == null ? '0' : Item(this).attribute('_order');
+}
+
+Template.main.disabledClass = function() {
+	return Item(this).disabled(currentChange()) ? 'item-disabled' : '';
 }
 
 Template.outer.rendered = function () {

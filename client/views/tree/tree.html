@@ -18,11 +18,12 @@
 				{{#if dirty}}
 				<span class="dirty-icon glyphicon glyphicon-star"></span>
 				{{else}}
+					<span style="display:none;">{{dirtyChildrenHelper}}</span>
 					{{#if hasDirtyChildren}}
 					<span class="dirty-icon glyphicon glyphicon-star-empty"></span>
 					{{/if}}
 				{{/if}}
-				<a href="{{pathFor 'items'}}">{{name}}</a>
+				<a href="{{pathFor 'items'}}" class="{{disabledClass}}">{{name}}</a>
 			</p>
 		</div>
 		{{/if}}

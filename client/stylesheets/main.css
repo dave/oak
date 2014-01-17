@@ -2,6 +2,9 @@
 body {
 }
 
+.item-disabled {
+	text-decoration: line-through;
+}
 
 div.template-edit > h2.name:first-letter {
 	text-transform: uppercase;
