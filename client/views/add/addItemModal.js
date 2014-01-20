@@ -42,6 +42,14 @@ Template.addItemModal.events({
 			return;
 		}
 
+		var id = addItem({
+			name: name.toLowerCase(),
+			type: form.find('#type').val(),
+			parent: selected().id(),
+			created: currentChange().id()
+		});
+
+		/*
 		var id = new Meteor.Collection.ObjectID()._str;
 		Items.insert({
 			_id: id,
@@ -50,11 +58,12 @@ Template.addItemModal.events({
 			parent: selected().id(),
 			attributes: {_enabled: {name: '_enabled', value: false}}
 		});
+		*/
 		var item = Item(id);
-		quickTweak(item, {_enabled: true, _created: currentChange().id()});
+		quickTweak(item, {_enabled: true});
 		$('#addItemModal').modal('hide');
 		selected().open(true);
-		Router.go('detail', {_id: item.id()});
+		//Router.go('detail', {_id: item.id()});
 		e.stopImmediatePropagation();
 	}
 });

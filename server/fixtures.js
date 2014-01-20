@@ -14,31 +14,27 @@ Meteor.methods({
 		if (Items.find().count() === 0) {
 			var change = Change(Changes.insert({}));
 
-			var insert = function (parent, itemData) {
-				var id = new Meteor.Collection.ObjectID()._str;
-
-				var defaults = {
-					_id: id,
-					parent: parent,
-					attributes: {}
-				};
-				item = _.extend(defaults, itemData);
+			var insert = function (parentId, itemData) {
 
 				/**
 				 * Ugh we can't {{#each}} around an object - only an array - so we have to create an array
 				 */
-				var newAttributes = {};
-				_.each(item.attributes, function(value, key) {
-					newAttributes[key] = {name: key, value: value};
+				var attributes = {};
+				_.each(itemData.attributes, function(value, key) {
+					attributes[key] = {name: key, value: value};
 				});
-				newAttributes['_enabled'] = {name: '_enabled', value: true};
-				item.attributes = {_enabled: {name: '_enabled', value: false}};
+				attributes['_enabled'] = {name: '_enabled', value: true};
 
-				Items.insert(item);
+				var id = addItem({
+					name: itemData.name,
+					type: itemData.type,
+					parent: parentId,
+					created: change.id()
+				});
 
 				var item = Item(id);
 
-				createTweak(item, change, null, null, newAttributes, function(){});
+				createTweak(item, change, null, null, attributes, function(){});
 
 				return id;
 			}
