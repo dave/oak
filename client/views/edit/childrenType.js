@@ -40,8 +40,7 @@ Template.childrenTypeRowFull.events({
 	},
 	'click button[data-action="add"]': function(e) {
 		e.preventDefault();
-		Session.set('addItemModalChildName', Item(this).name());
-		Session.set('addItemModalFormVisible', true);
+		addItemOrShowModal(e, 'type', Item(this).name());
 	}
 });
 
@@ -49,7 +48,6 @@ Template.childrenTypeRowFull.events({
 Template.childrenTypeRowEmpty.events({
 	'click button[data-action="add"]': function(e) {
 		e.preventDefault();
-		Session.set('addItemModalChildName', this.name);
-		Session.set('addItemModalFormVisible', true);
+		addItemOrShowModal(e, 'type', this.name);
 	}
 });

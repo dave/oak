@@ -44,6 +44,6 @@ Template.childrenListRow.events({
 Template.childrenList.events({
 	'click button[data-action="add"]': function(e) {
 		e.preventDefault();
-		Session.set('addItemModalFormVisible', true);
+		addItemOrShowModal(e, 'list');
 	}
 });

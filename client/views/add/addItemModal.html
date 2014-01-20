@@ -27,6 +27,7 @@
 			<input type="text" class="form-control" id="name" placeholder="Name" value="{{attribute}}">
 		</div>
 		{{/if}}
+		{{#if $many types}}
 		<div class="form-group">
 			<label>Type</label>
 			<select class="form-control" id="type">
@@ -36,6 +37,7 @@
 				{{/each}}
 			</select>
 		</div>
+		{{/if}}
 	</form>
 	{{/if}}
 </template>
