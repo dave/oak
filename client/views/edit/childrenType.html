@@ -20,12 +20,12 @@
 
 <template name="childrenTypeRow">
 
-	{{#if children}}
-	{{#each children}}
-	{{#if showInList}}
-	{{>childrenTypeRowFull}}
-	{{/if}}
-	{{/each}}
+	{{#if $cursor children}}
+		{{#each children}}
+		{{#if showInList}}
+		{{>childrenTypeRowFull}}
+		{{/if}}
+		{{/each}}
 	{{else}}
 	{{>childrenTypeRowEmpty}}
 	{{/if}}
@@ -42,12 +42,12 @@
 		<td>
 			<ul class="comma-seperated">
 				{{#each parentChildTypes}}
-				<li>{{this.type}}</li>
+				<li>{{this}}</li>
 				{{/each}}
 			</ul>
 		</td>
 		<td>
-			{{type.name}}
+			{{type}}
 		</td>
 		<td class="child-actions">
 			{{#if enabled}}
@@ -68,7 +68,7 @@
 		<td>
 			<ul class="comma-seperated">
 				{{#each this.types}}
-				<li>{{this.type}}</li>
+				<li>{{this}}</li>
 				{{/each}}
 			</ul>
 		</td>

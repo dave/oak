@@ -64,7 +64,7 @@ Template.addItemModal.rendered = function() {
 
 addItemOrShowModal = function(e, source, name) {
 	if (source === 'type') {
-		var availableTypes = selected().childHoldsTypes(Session.get('addItemModalChildName'));
+		var availableTypes = selected().childHoldsTypes(name);
 		if (availableTypes.length == 1) {
 			/**
 			 * There's only one option, so we just add it directly

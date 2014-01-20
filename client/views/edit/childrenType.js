@@ -3,6 +3,10 @@ Template.childrenType.type = function () {
 	return types[selected().type().name];
 }
 
+Template.childrenTypeRow.haschildren = function() {
+	return selected().children(this.name).cursor();
+}
+
 Template.childrenTypeRow.children = function() {
 	return selected().children(this.name).cursor();
 }
