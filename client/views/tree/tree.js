@@ -3,24 +3,20 @@ Template.tree.getRoot = function () {
 }
 
 Template.main.getChildren = function () {
-	return Item(this).children().cursor();
+	return Item(this).visibleChildren(currentChange()).cursor();
 }
 
 Template.main.hasChildren = function () {
-	return Item(this).children().has();
+	return Item(this).visibleChildren(currentChange()).has();
 }
 
 Template.main.isOpen = function () {
 	return this._id == null || Item(this).open();
 }
 
-Template.main.showInList = function () {
-	return this._id != null && Item(this).showInList('tree', currentChange());
-}
-
 Template.main.glyph = function () {
 
-	if (!Item(this).children().has())
+	if (!Item(this).visibleChildren(currentChange()).has())
 		return 'glyphicon-unchecked';
 
 	if (Item(this).open())
@@ -70,21 +66,36 @@ Template.main.disabledClass = function() {
 Template.outer.rendered = function () {
 	$('body').on('keydown', function (e) {
 
-		if (document.activeElement.tagName != 'BODY')
+		if (document.activeElement.tagName != 'BODY') {
 			return;
+		}
 
-		e.preventDefault();
+		var keyPress = function(action) {
+			e.preventDefault();
+			action.call(this);
+			e.stopImmediatePropagation();
+		}
 
-		if (e.keyCode == 40)
-			keyPressDown();
-		else if (e.keyCode == 38)
-			keyPressUp();
-		else if (e.keyCode == 39)
-			keyPressRight();
-		else if (e.keyCode == 37)
-			keyPressLeft();
-
-		e.stopImmediatePropagation();
+		if (e.keyCode == 40) {
+			keyPress(function(){
+				keyPressDown();
+			});
+		}
+		else if (e.keyCode == 38) {
+			keyPress(function(){
+				keyPressUp();
+			});
+		}
+		else if (e.keyCode == 39) {
+			keyPress(function(){
+				keyPressRight();
+			});
+		}
+		else if (e.keyCode == 37) {
+			keyPress(function(){
+				keyPressLeft();
+			});
+		}
 	});
 }
 
@@ -92,17 +103,9 @@ var keyPressUp = function() {
 	if (!selected())
 		return;
 
-	var next = selected();
-
-	do {
-		next = next.tree(-1);
-	}
-	while (next != null && !next.showInList());
-
-	//var next = selected().tree(-1);
+	var next = selected().tree(-1);
 	if (next)
 		next.select();
-
 }
 
 var keyPressDown = function() {
@@ -111,17 +114,11 @@ var keyPressDown = function() {
 		return;
 	}
 
-	var next = selected();
-
-	do {
-		next = next.tree(1);
-	}
-	while (next != null && !next.showInList());
-
-	//var next = selected().tree(1);
-	if (next)
+	var next = selected().tree(1);
+	if (next) {
 		next.select();
-	else if (selected().children().has()) {
+	}
+	else if (selected().visibleChildren(currentChange()).has()) {
 		/**
 		 * If we're at the bottom of the tree, and the current item has children
 		 * then it is closed, so let's open it.
@@ -131,10 +128,12 @@ var keyPressDown = function() {
 }
 
 var keyPressRight = function() {
-	if (selected().open())
-		selected().children().first().select();
-	else if (selected().children().has())
+	if (selected().open()) {
+		selected().visibleChildren(currentChange()).first().select();
+	}
+	else if (selected().visibleChildren(currentChange()).has()) {
 		selected().open(true);
+	}
 }
 
 var keyPressLeft = function() {

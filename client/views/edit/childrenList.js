@@ -7,11 +7,7 @@ Template.childrenList.listHolds = function(){
 }
 
 Template.childrenList.children = function () {
-	return selected() == null ? null : selected().children().cursor();
-}
-
-Template.childrenList.showInList = function () {
-	return Item(this).showInList('list', currentChange());
+	return selected() == null ? null : selected().visibleChildren(currentChange()).cursor();
 }
 
 Template.childrenListRow.enabled = function() {

@@ -4,15 +4,11 @@ Template.childrenType.type = function () {
 }
 
 Template.childrenTypeRow.haschildren = function() {
-	return selected().children(this.name).cursor();
+	return selected().visibleChildren(currentChange(), this.name).cursor();
 }
 
 Template.childrenTypeRow.children = function() {
-	return selected().children(this.name).cursor();
-}
-
-Template.childrenTypeRow.showInList = function () {
-	return Item(this).showInList('type', currentChange());
+	return selected().visibleChildren(currentChange(), this.name).cursor();
 }
 
 Template.childrenTypeRowFull.enabled = function() {
