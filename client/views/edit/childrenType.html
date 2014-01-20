@@ -20,10 +20,12 @@
 
 <template name="childrenTypeRow">
 
-	{{#if child}}
-	{{#with child}}
+	{{#if children}}
+	{{#each children}}
+	{{#if showInList}}
 	{{>childrenTypeRowFull}}
-	{{/with}}
+	{{/if}}
+	{{/each}}
 	{{else}}
 	{{>childrenTypeRowEmpty}}
 	{{/if}}

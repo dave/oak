@@ -20,3 +20,20 @@ Template.logIn.events({
 		});
 	}
 });
+
+Template.header.events({
+	'click a[data-action="reset"]': function(){
+		Meteor.call(
+			'reset',
+			null,
+			function(error, id) {
+				if (error) {
+					throw error;
+				}
+				else {
+					Router.go('items');
+				}
+			}
+		);
+	}
+});

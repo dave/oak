@@ -2,10 +2,6 @@
 body {
 }
 
-.item-disabled {
-	text-decoration: line-through;
-}
-
 div.template-edit > h2.name:first-letter {
 	text-transform: uppercase;
 }
@@ -32,11 +28,15 @@ nav.tree div.item-holder > p.item-label > span.dirty-icon {
 }
 li.selected > div.item-holder > span.item-icon,
 li.selected > div.item-holder > p.item-label > span.dirty-icon,
-li > div.item-holder:hover > span.item-icon {
+li > div.item-holder:hover > span.item-icon,
+li > div.item-holder:hover > p.item-label > span.dirty-icon {
 	opacity: 1.0;
 }
-div.item-holder a:hover {
+a:hover {
 	text-decoration: none;
+}
+a.item-disabled, a.item-disabled:hover {
+	text-decoration: line-through;
 }
 
 nav.tree ul {

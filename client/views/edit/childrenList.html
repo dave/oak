@@ -13,26 +13,32 @@
 		</thead>
 		<tbody>
 		{{#each children}}
-		{{> listChildRow}}
+		{{#if showInList }}
+		{{> childrenListRow}}
+		{{/if}}
 		{{/each}}
 		</tbody>
 	</table>
 	<p>
-		<button type="button" data-action="add" class="btn btn-default">Add</button>
+		<button type="button" data-action="add" class="btn btn-default" data-toggle="modal" data-target="#addItemModal">Add</button>
 	</p>
 	{{/if}}
 </template>
 
-<template name="listChildRow">
+<template name="childrenListRow">
 	<tr>
 		<td>
-			<a href="{{pathFor 'items'}}" class="child-link">{{this.name}}</a>
+			<a href="{{pathFor 'items'}}" class="child-link {{disabledClass}}">{{this.name}}</a>
 		</td>
 		<td>
 			{{this.type}}
 		</td>
 		<td>
+			{{#if enabled}}
 			<button type="button" data-action="delete" class="btn btn-default btn-xs">Delete</button>
+			{{else}}
+			<button type="button" data-action="undelete" class="btn btn-default btn-xs">Undelete</button>
+			{{/if}}
 		</td>
 	</tr>
 </template>

@@ -16,12 +16,9 @@ Template.breadcrumbs.ancestors = function(){
 	return selected().ancestors();
 }
 
-
 Template.children.type = Template.attributes.type = function () {
 	return types[selected().type().name];
 }
-
-
 
 Template.attributes.events({
 	'click button[data-action="save"]': function(e) {

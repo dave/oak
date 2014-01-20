@@ -14,8 +14,8 @@ Template.main.isOpen = function () {
 	return this._id == null || Item(this).open();
 }
 
-Template.main.isItem = function () {
-	return this._id != null;
+Template.main.showInList = function () {
+	return this._id != null && Item(this).showInList('tree', currentChange());
 }
 
 Template.main.glyph = function () {
@@ -92,7 +92,14 @@ var keyPressUp = function() {
 	if (!selected())
 		return;
 
-	var next = selected().tree(-1);
+	var next = selected();
+
+	do {
+		next = next.tree(-1);
+	}
+	while (next != null && !next.showInList());
+
+	//var next = selected().tree(-1);
 	if (next)
 		next.select();
 
@@ -103,7 +110,15 @@ var keyPressDown = function() {
 		roots().at(0).select();
 		return;
 	}
-	var next = selected().tree(1);
+
+	var next = selected();
+
+	do {
+		next = next.tree(1);
+	}
+	while (next != null && !next.showInList());
+
+	//var next = selected().tree(1);
 	if (next)
 		next.select();
 	else if (selected().children().has()) {

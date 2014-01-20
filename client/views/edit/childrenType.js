@@ -3,8 +3,12 @@ Template.childrenType.type = function () {
 	return types[selected().type().name];
 }
 
-Template.childrenTypeRow.child = function() {
-	return selected().child(this.name);
+Template.childrenTypeRow.children = function() {
+	return selected().children(this.name).cursor();
+}
+
+Template.childrenTypeRow.showInList = function () {
+	return Item(this).showInList('type', currentChange());
 }
 
 Template.childrenTypeRowFull.enabled = function() {
@@ -15,7 +19,7 @@ Template.childrenTypeRowFull.disabledClass = function() {
 }
 
 Template.childrenTypeRowFull.parentChildTypes = function() {
-	return Item(this).parent().type().children[this.name()].types;
+	return Item(this).parent().type().children[Item(this).name()].types;
 }
 
 Template.childrenTypeRowFull.events({
@@ -33,5 +37,19 @@ Template.childrenTypeRowFull.events({
 		e.preventDefault();
 		quickTweak(Item(this), {_enabled: true});
 		e.stopImmediatePropagation();
+	},
+	'click button[data-action="add"]': function(e) {
+		e.preventDefault();
+		Session.set('addItemModalChildName', Item(this).name());
+		Session.set('addItemModalFormVisible', true);
+	}
+});
+
+
+Template.childrenTypeRowEmpty.events({
+	'click button[data-action="add"]': function(e) {
+		e.preventDefault();
+		Session.set('addItemModalChildName', this.name);
+		Session.set('addItemModalFormVisible', true);
 	}
 });

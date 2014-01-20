@@ -11,7 +11,7 @@
 
 <template name="main">
 	<li data-order="{{order}}" class="{{selected}}">
-		{{#if isItem}}
+		{{#if showInList}}
 		<div class="item-holder">
 			<span class="item-icon glyphicon {{glyph}}"></span>
 			<p id="{{_id}}" class="item-label">
