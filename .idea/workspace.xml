@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="573ac87f-7d61-4706-b213-92a84a152a05" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/add/addItemModal.js" afterPath="$PROJECT_DIR$/client/views/add/addItemModal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/edit/childrenType.html" afterPath="$PROJECT_DIR$/client/views/edit/childrenType.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/edit/childrenType.js" afterPath="$PROJECT_DIR$/client/views/edit/childrenType.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/helpers.js" afterPath="$PROJECT_DIR$/client/helpers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/_types.js" afterPath="$PROJECT_DIR$/lib/_types.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/views/add/addItemModal.html" afterPath="$PROJECT_DIR$/client/views/add/addItemModal.html" />
     </list>
     <ignored path="daves-cms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,6 +44,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="addItemModal.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/views/add/addItemModal.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="735" selection-end="735" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="720">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_types.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/_types.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="19" selection-start="615" selection-end="615" vertical-scroll-proportion="0.4941427" vertical-offset="166" max-vertical-offset="4440">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="helpers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/helpers.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -55,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addItemModal.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="addItemModal.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/views/add/addItemModal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="51" selection-start="1934" selection-end="1934" vertical-scroll-proportion="0.7827476" vertical-offset="465" max-vertical-offset="1515">
+            <state line="29" column="65" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1515">
               <folding />
             </state>
           </provider>
@@ -82,7 +98,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/client/views/application/layout.js" />
         <option value="$PROJECT_DIR$/client/views/tree/tree.html" />
         <option value="$PROJECT_DIR$/lib/application/router.js" />
         <option value="$PROJECT_DIR$/client/views/edit/childrenList.html" />
@@ -93,11 +108,12 @@
         <option value="$PROJECT_DIR$/lib/version.js" />
         <option value="$PROJECT_DIR$/client/views/edit/childrenList.js" />
         <option value="$PROJECT_DIR$/lib/item.js" />
-        <option value="$PROJECT_DIR$/client/views/add/addItemModal.html" />
         <option value="$PROJECT_DIR$/client/views/edit/childrenType.js" />
         <option value="$PROJECT_DIR$/client/helpers.js" />
         <option value="$PROJECT_DIR$/client/views/edit/childrenType.html" />
         <option value="$PROJECT_DIR$/client/views/add/addItemModal.js" />
+        <option value="$PROJECT_DIR$/client/views/add/addItemModal.html" />
+        <option value="$PROJECT_DIR$/lib/_types.js" />
       </list>
     </option>
   </component>
@@ -670,13 +686,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/classes/helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="32" selection-start="1161" selection-end="1185" vertical-scroll-proportion="1.4380531" vertical-offset="0" max-vertical-offset="1200">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/views/edit/edit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="3" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.6580427" vertical-offset="0" max-vertical-offset="889">
@@ -708,13 +717,6 @@
     <entry file="file://$PROJECT_DIR$/client/views/tree/tree.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="99" column="37" selection-start="2057" selection-end="2057" vertical-scroll-proportion="0.32845894" vertical-offset="1193" max-vertical-offset="2250">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/add/addItemModal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="27" selection-start="1059" selection-end="1059" vertical-scroll-proportion="0.47540984" vertical-offset="0" max-vertical-offset="915">
           <folding />
         </state>
       </provider>
@@ -779,7 +781,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/views/add/addItemModal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="51" selection-start="1934" selection-end="1934" vertical-scroll-proportion="0.7827476" vertical-offset="465" max-vertical-offset="1515">
+        <state line="29" column="65" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1515">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/views/add/addItemModal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="735" selection-end="735" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/_types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="19" selection-start="615" selection-end="615" vertical-scroll-proportion="0.4941427" vertical-offset="166" max-vertical-offset="4440">
           <folding />
         </state>
       </provider>
