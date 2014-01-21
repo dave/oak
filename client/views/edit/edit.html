@@ -35,7 +35,7 @@
 </template>
 
 <template name="attributes">
-	<form role="form" id="attributesForm">
+	<form role="form">
 		{{#if type.attributeArray}}
 		<h2>Attributes</h2>
 		{{#each type.attributeArray}}
@@ -48,7 +48,7 @@
 			{{/if}}
 		</div>
 		{{/each}}
-		<button type="button" data-action="save" class="btn btn-default">Save</button>
+		<button type="submit" data-action="save" class="btn btn-default">Save</button>
 		{{/if}}
 	</form>
 </template>
