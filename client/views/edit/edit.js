@@ -22,19 +22,33 @@ Template.children.type = Template.attributes.type = function () {
 
 Template.attributes.events({
 	'click button[data-action="save"]': function(e) {
-		e.preventDefault();
-		var item = selected();
-		var updates = {};
-		var holder = $(e.currentTarget).closest('form');
-		_.each(item.type().attributes, function(attribute, name){
-			var oldValue = item.attribute(name, currentChange());
-			var newValue = holder.find('.form-control[data-name="' + name + '"]').val();
-			if (newValue != oldValue)
-				updates[name] = newValue;
-		});
-		if (Object.keys(updates).length > 0) {
-			quickTweak(item, updates);
+		attributesSaveAction(e);
+	},
+	'keydown #attributesForm': function(e) {
+
+		if (document.activeElement.tagName == 'TEXTAREA') {
+			return;
 		}
-		e.stopImmediatePropagation();
+
+		if(e.keyCode == 13){
+			attributesSaveAction(e);
+		}
 	}
 });
+
+var attributesSaveAction = function(e) {
+	e.preventDefault();
+	var item = selected();
+	var updates = {};
+	var holder = $(e.currentTarget).closest('form');
+	_.each(item.type().attributes, function(attribute, name){
+		var oldValue = item.attribute(name, currentChange());
+		var newValue = holder.find('.form-control[data-name="' + name + '"]').val();
+		if (newValue != oldValue)
+			updates[name] = newValue;
+	});
+	if (Object.keys(updates).length > 0) {
+		quickTweak(item, updates);
+	}
+	e.stopImmediatePropagation();
+}

@@ -19,42 +19,51 @@ Template.addItemModalForm.addItemModalFormVisible = function(){
 
 Template.addItemModal.events({
 	'click button[data-action="add"]': function(e) {
-		e.preventDefault();
-
-		var form = $('#addItemModalFormTag');
-		var name = selected().type().list ? form.find('#name').val().toLowerCase() : Session.get('addItemModalChildName');
-
-		if (selected().type().list) {
-			var r = new RegExp('^[a-z_0-9]{1,15}$');
-			if (!r.test(name)) {
-				alert('Name must be max 15 chars, letters, numbers and underccores.')
-				return;
-			}
+		addItemModalSubmitAction(e);
+	},
+	'keydown #addItemModalFormTag': function(e) {
+		if(e.keyCode == 13){
+			addItemModalSubmitAction(e);
 		}
-
-		var types = Template.addItemModalForm.types();
-		var type;
-
-		if (types.length == 1) {
-			type = types[0].name;
-		} else {
-			type = form.find('#type').val();
-			if (type == '') {
-				alert('Select a type');
-				return;
-			}
-		}
-
-		addItemModalAddItem(
-			name,
-			type,
-			selected().id(),
-			getChange().id()
-		);
-		$('#addItemModal').modal('hide');
-		e.stopImmediatePropagation();
 	}
 });
+
+var addItemModalSubmitAction = function(e) {
+	e.preventDefault();
+
+	var form = $('#addItemModalFormTag');
+	var name = selected().type().list ? form.find('#name').val().toLowerCase() : Session.get('addItemModalChildName');
+
+	if (selected().type().list) {
+		var r = new RegExp('^[a-z_0-9]{1,15}$');
+		if (!r.test(name)) {
+			alert('Name must be max 15 chars, letters, numbers and underccores.');
+			return;
+		}
+	}
+
+	var types = Template.addItemModalForm.types();
+	var type;
+
+	if (types.length == 1) {
+		type = types[0].name;
+	} else {
+		type = form.find('#type').val();
+		if (type == '') {
+			alert('Select a type');
+			return;
+		}
+	}
+
+	addItemModalAddItem(
+		name,
+		type,
+		selected().id(),
+		getChange().id()
+	);
+	$('#addItemModal').modal('hide');
+	e.stopImmediatePropagation();
+}
 
 Template.addItemModal.rendered = function() {
 	$('#addItemModal').on('hidden.bs.modal', function () {
