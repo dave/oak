@@ -2,6 +2,10 @@ Template.tree.getRoot = function () {
 	return roots().cursor();
 }
 
+Template.main.register = function () {
+	//tally('active_items', Item(this).id(), true);
+}
+
 Template.main.getChildren = function () {
 	return Item(this).visibleChildren(currentChange()).cursor();
 }

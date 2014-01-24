@@ -1,3 +1,7 @@
+Meteor.publish('itemsByParent', function(options) {
+	return Items.find({parent: {$in: options.parents}});
+});
+
 Meteor.publish('items', function() {
 	return Items.find();
 });
