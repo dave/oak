@@ -11,7 +11,10 @@ Template.changeListRow.events({
 	'click .select': function (e) {
 		e.preventDefault();
 		Change(this).selected(true);
-		Router.go('items');
+		if (selected())
+			Router.go('detail', selected());
+		else
+			Router.go('items');
 		e.stopImmediatePropagation();
 	},
 	'click .live': function (e) {

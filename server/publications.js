@@ -7,7 +7,8 @@ Meteor.publish('itemsAll', function() {
 });
 
 Meteor.publish('itemsOne', function(id) {
-	return Items.find({$or: [{_id: id}, {parent: id}]});
+	var item = Item(id);
+	return Items.find({$or: [{_id: id}, {parent: id}, {parent: item.parent($id)}]});
 });
 
 Meteor.publish('changes', function() {
