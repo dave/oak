@@ -3,8 +3,17 @@ Template.edit.item = function () {
 	return selected();
 }
 
+Template.attributes.placeholder = function(){
+	if (!selected().loaded()) {
+		return 'Loading...';
+	}
+	return '';
+}
 Template.attributes.attribute = function(){
-	if (currentChange()) {
+	if (!selected().loaded()) {
+		return '';
+	}
+	else if (currentChange()) {
 		return selected().attribute(this.name, currentChange()) || '';
 	}
 	else {
@@ -18,6 +27,10 @@ Template.breadcrumbs.ancestors = function(){
 
 Template.children.type = Template.attributes.type = function () {
 	return types[selected().type().name];
+}
+
+Template.edit.loaded = function() {
+	return selected().data().attributes != null;
 }
 
 Template.attributes.events({

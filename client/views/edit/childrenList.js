@@ -11,10 +11,10 @@ Template.childrenList.children = function () {
 }
 
 Template.childrenListRow.enabled = function() {
-	return !Item(this).disabled(currentChange());
+	return Item(this).enabled(currentChange());
 }
 Template.childrenListRow.disabledClass = function() {
-	return Item(this).disabled(currentChange()) ? 'item-disabled' : '';
+	return Item(this).enabled(currentChange()) ? '' : 'item-disabled';
 }
 
 

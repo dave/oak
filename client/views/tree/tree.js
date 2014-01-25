@@ -60,7 +60,7 @@ Template.main.order = function () {
 }
 
 Template.main.disabledClass = function() {
-	return Item(this).disabled(currentChange()) ? 'item-disabled' : '';
+	return Item(this).enabled(currentChange()) ? '' : 'item-disabled';
 }
 
 Template.outer.rendered = function () {
@@ -105,18 +105,18 @@ var keyPressUp = function() {
 
 	var next = selected().tree(-1);
 	if (next)
-		next.select();
+		next.select(true);
 }
 
 var keyPressDown = function() {
 	if (!selected()) {
-		roots().at(0).select();
+		roots().at(0).select(true);
 		return;
 	}
 
 	var next = selected().tree(1);
 	if (next) {
-		next.select();
+		next.select(true);
 	}
 	else if (selected().visibleChildren(currentChange()).has()) {
 		/**
@@ -129,7 +129,7 @@ var keyPressDown = function() {
 
 var keyPressRight = function() {
 	if (selected().open()) {
-		selected().visibleChildren(currentChange()).first().select();
+		selected().visibleChildren(currentChange()).first().select(true);
 	}
 	else if (selected().visibleChildren(currentChange()).has()) {
 		selected().open(true);
@@ -140,5 +140,5 @@ var keyPressLeft = function() {
 	if (selected().open())
 		selected().open(false);
 	else
-		selected().parent().select();
+		selected().parent().select(true);
 }

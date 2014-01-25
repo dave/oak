@@ -51,11 +51,15 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li class="{{active 'items' 'detail'}}"><a href="{{pathFor 'items'}}">Items</a></li>
+				<li class="{{active 'items' 'detail'}}">
+					{{#if selected}}
+						<a href="{{pathFor 'detail' selected}}">Items</a>
+					{{else}}
+						<a href="{{pathFor 'items'}}">Items</a>
+					{{/if}}
+				</li>
 				<li class="{{active 'changes'}}"><a href="{{pathFor 'changes'}}">Changes</a></li>
 			</ul>
-
-
 
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">

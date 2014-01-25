@@ -12,10 +12,10 @@ Template.childrenTypeRow.children = function() {
 }
 
 Template.childrenTypeRowFull.enabled = function() {
-	return !Item(this).disabled(currentChange());
+	return Item(this).enabled(currentChange());
 }
 Template.childrenTypeRowFull.disabledClass = function() {
-	return Item(this).disabled(currentChange()) ? 'item-disabled' : '';
+	return Item(this).enabled(currentChange()) ? '' : 'item-disabled';
 }
 
 Template.childrenTypeRowFull.parentChildTypes = function() {
