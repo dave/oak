@@ -48,13 +48,13 @@ Meteor.methods({
 						{
 							insert(hero, {type: 'image', name: 'image', attributes: {width: 2000, height: 800, url: 'https://d2c87l0yth4zbw.cloudfront.net/i/home/intro-ipad.jpg'}});
 							insert(hero, {type: 'text', name: 'header', attributes: {text: 'Soundtrack your life'}});
-							insert(hero, {type: 'text', name: 'subhead', attributes: {text: 'Let Spotify bring you the right music for every mood and moment.'}});
+							insert(hero, {type: 'text', name: 'subhead', attributes: {text: 'Let us bring you the right music for every mood and moment.'}});
 						}
 					}
 					var features = insert(corporate, {type: 'page', name: 'features'});
 					{
 						var heading = insert(features, {type: 'text', name: 'heading', attributes: {text: 'Follow & share'}});
-						var body = insert(features, {type: 'text', name: 'body', attributes: {text: 'Music brings people together. That’s why Spotify is so social. Share music on Spotify, Facebook, Twitter, your blog and via email. You can follow other cool people too. When they find great new music, so do you.'}});
+						var body = insert(features, {type: 'text', name: 'body', attributes: {text: 'Music brings people together. That’s why we are so social. Share music on Facebook, Twitter, your blog and via email. You can follow other cool people too. When they find great new music, so do you.'}});
 						var intro = insert(features, {type: 'section_hero', name: 'intro'});
 						{
 							var image = insert(intro, {type: 'translated_image', name: 'image', attributes: {url: 'https://d2c87l0yth4zbw.cloudfront.net/i/home/intro-bike.jpg', width: 2000, height: 800}});
