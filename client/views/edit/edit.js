@@ -13,17 +13,20 @@ Template.attributes.attribute = function(){
 	if (!selected().loaded()) {
 		return '';
 	}
-	else if (currentChange()) {
+	else {
 		return selected().attribute(this.name, currentChange()) || '';
 	}
-	else {
-		return selected().attribute(this.name) || '';
-	}
+}
+
+Template.attributes.context = function(){
+	return {name: this.name, item: selected()};
 }
 
 Template.breadcrumbs.ancestors = function(){
 	return selected().ancestors();
 }
+
+
 
 Template.children.type = Template.attributes.type = function () {
 	return types[selected().type().name];

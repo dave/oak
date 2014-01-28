@@ -42,7 +42,9 @@
 		<div class="form-group">
 			<label>{{this.name}}</label>
 			{{#if $eq this.type 'string'}}
-			<textarea type="text" class="form-control" data-name="{{this.name}}" placeholder="{{placeholder}}">{{attribute}}</textarea>
+			{{#with context}}
+			{{> codemirror }}
+			{{/with}}
 			{{else}}
 			<input type="text" class="form-control" data-name="{{this.name}}" placeholder="{{placeholder}}" value="{{attribute}}">
 			{{/if}}

@@ -1,0 +1,10 @@
+<template name="codemirror">
+	{{#constant}}
+	<textarea
+		name="{{this.item._id}}-{{this.name}}"
+		type="text"
+		class="form-control"
+		data-name="{{this.name}}"
+		placeholder="{{placeholder}}">{{attribute}}</textarea>
+	{{/constant}}
+</template>
